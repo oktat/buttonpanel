@@ -5,6 +5,7 @@ import java.util.HashMap;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 public class ButtonPanel extends JPanel{
     public HashMap<String, JButton> buttons;
@@ -19,5 +20,6 @@ public class ButtonPanel extends JPanel{
     private void initPanel() {
         this.buttons = new HashMap<>();
         this.setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
+        this.setBorder(new EmptyBorder(0, 10, 0, 10));
     }
 }
