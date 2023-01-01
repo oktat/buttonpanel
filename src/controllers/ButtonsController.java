@@ -35,8 +35,11 @@ public class ButtonsController {
 
         double base = Double.parseDouble(baseInput.getValue());
         double height = Double.parseDouble(heightInput.getValue());
-        Double area = base * height / 2;
+        Double area = this.calcTriangleArea(base, height);
         areaInput.setValue(area.toString());
+    }
+    private Double calcTriangleArea(double base, double height) {
+        return base * height / 2;
     }
     private void onClickAboutButton() {
         String content = "Sallai András\n2023-01-01";
